@@ -1,0 +1,12 @@
+.name {
+  display: flex;
+}
+.emailpassword {
+  flex: 0.2;
+  text-align: right;
+  padding: 3px;
+}
+.password {
+  flex: 1;
+  padding: 3px;
+}
