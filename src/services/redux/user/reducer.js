@@ -14,6 +14,12 @@ const userReducer = (state = initialState, action) => {
         isLogin: true,
         loginData: action.payload,
       };
+    case types.loginDetail:
+      return {
+        ...state,
+        isLogin: true,
+        loginData: action.payload,
+      };
     default:
       return state;
   }
