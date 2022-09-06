@@ -1,10 +1,5 @@
-body {
-  background: #bdc3c7;
-  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
-  background: linear-gradient(to right, #2c3e50, #bdc3c7);
-}
-.form {
-  background-color: white;
+.loginform {
+  background-color: "white";
   border-radius: 5px;
   margin: 20px auto;
   padding: 20px;
@@ -25,11 +20,9 @@ body {
 }
 .footer {
   text-align: center;
-  margin-top: 15px;
 }
 .error_name {
   text-align: center;
-  /* margin-top: 5px; */
   color: red;
 }
 .error_label {
