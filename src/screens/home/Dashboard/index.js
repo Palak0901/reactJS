@@ -1,15 +1,15 @@
 import { useState } from "react";
 import "react-modern-drawer/dist/index.css";
-import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 import CustomDrawer from "../../../navigation/drawer/CustomDrawer";
 import "./style.css";
 
 function Dashboard(props) {
-  const { state } = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
   };
+  const userLogin = useSelector((state) => state.userReducer);
   return (
     <div className="form">
       <div className="form-body">
@@ -20,8 +20,8 @@ function Dashboard(props) {
           isOpen={isOpen}
           toggleDrawer={toggleDrawer}
           label={"Profile"}
-          details={state?.item?.name}
-          image={state?.item?.profile_pic}
+          details={userLogin?.loginData?.name}
+          image={userLogin?.loginData?.profile_pic}
         />
       </div>
     </div>
