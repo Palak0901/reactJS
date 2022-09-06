@@ -1,7 +1,7 @@
 export default {
   registration: "/",
   login: "/login",
-  detailsPage: "/detailsPage",
-  dashboard: "/dashboard",
+  detailsPage: "/topNav/detailsPage",
+  dashboard: "/topNav/dashboard",
   topNav: "/topNav",
 };
