@@ -1,27 +1,36 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LoginForm from "../../screens/auth/Login";
-import RegistrationForm from "../../screens/auth/Registration";
-import Dashboard from "../../screens/home/Dashboard";
-import DetailsPage from "../../screens/home/DetailsPage";
-import screenName from "../../utils/screenName";
-import TopNavigation from "../topNav/TopNavigation";
+import Utils from "../../utils";
 
-function AuthStack() {
+const AuthStack = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route
           exact
-          path={screenName.registration}
-          element={<RegistrationForm />}
+          path={Utils.screenName.registration}
+          element={<Utils.navigationImport.registerScreen />}
         />
-        <Route exact path={screenName.login} element={<LoginForm />} />
-        <Route exact path={screenName.topNav} element={<TopNavigation />} />
-        <Route path={screenName.dashboard} element={<Dashboard />} />
-        <Route path={screenName.detailsPage} element={<DetailsPage />} />
+        <Route
+          exact
+          path={Utils.screenName.login}
+          element={<Utils.navigationImport.loginScreen />}
+        />
+        <Route
+          exact
+          path={Utils.screenName.topNav}
+          element={<Utils.navigationImport.topNavigation />}
+        />
+        <Route
+          path={Utils.screenName.dashboard}
+          element={<Utils.navigationImport.dashboardScreen />}
+        />
+        <Route
+          path={Utils.screenName.detailsPage}
+          element={<Utils.navigationImport.detailsScreen />}
+        />
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default AuthStack;

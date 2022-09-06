@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import screenName from "../../utils/screenName";
+import Utils from "../../utils";
 
 const Navbar = () => {
   return (
@@ -14,10 +14,10 @@ const Navbar = () => {
     >
       <div style={{ display: "flex" }}>
         <li style={{ fontSize: 30 }}>
-          <Link to={screenName.dashboard}>Dashboard</Link>
+          <Link to={Utils.screenName.dashboard}>Dashboard</Link>
         </li>
         <li style={{ fontSize: 30 }}>
-          <Link to={screenName.detailsPage}>Details</Link>
+          <Link to={Utils.screenName.detailsPage}>Details</Link>
         </li>
       </div>
     </div>

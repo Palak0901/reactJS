@@ -1,19 +1,23 @@
 import { Route, Routes } from "react-router-dom";
-import Dashboard from "../../screens/home/Dashboard";
-import DetailsPage from "../../screens/home/DetailsPage";
-import screenName from "../../utils/screenName";
-import Navbar from "./CustomTop";
+import Utils from "../../utils";
 
-function TopNavigation() {
+const TopNavigation = () => {
   return (
     <>
-      <Navbar />
+      <Utils.components.customTop />
       <Routes>
-        <Route exact path={screenName.dashboard} element={<Dashboard />} />
-        <Route path={screenName.detailsPage} element={<DetailsPage />} />
+        <Route
+          exact
+          path={Utils.screenName.dashboard}
+          element={<Utils.navigationImport.dashboardScreen />}
+        />
+        <Route
+          path={Utils.screenName.detailsPage}
+          element={<Utils.navigationImport.detailsScreen />}
+        />
       </Routes>
     </>
   );
-}
+};
 
 export default TopNavigation;

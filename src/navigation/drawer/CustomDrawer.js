@@ -1,9 +1,6 @@
 import Drawer from "react-modern-drawer";
-// import { useNavigate } from "react-router-dom";
-import screenName from "../../utils/screenName";
 
-function CustomDrawer(props) {
-  // const navigate = useNavigate();
+const CustomDrawer = (props) => {
   return (
     <Drawer
       open={props.isOpen}
@@ -61,5 +58,5 @@ function CustomDrawer(props) {
       </div>
     </Drawer>
   );
-}
+};
 export default CustomDrawer;

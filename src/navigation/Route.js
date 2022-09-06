@@ -1,7 +1,7 @@
-import AuthStack from "./stack/AuthStack";
+import Utils from "../utils";
 
-function Route() {
-  return <AuthStack />;
-}
+const Route = () => {
+  return <Utils.navigationImport.authStack />;
+};
 
 export default Route;

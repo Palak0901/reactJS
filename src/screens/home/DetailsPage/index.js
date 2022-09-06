@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import "./style.css";
 
-function DetailsPage(props) {
+const DetailsPage = (props) => {
   const { state } = useLocation();
   return (
     <div className="form">
@@ -12,6 +12,6 @@ function DetailsPage(props) {
       <label className="name">{state.item.confirmPassword}</label>
     </div>
   );
-}
+};
 
 export default DetailsPage;
