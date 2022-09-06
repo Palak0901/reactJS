@@ -17,8 +17,8 @@ function AuthStack() {
         />
         <Route exact path={screenName.login} element={<LoginForm />} />
         <Route exact path={screenName.topNav} element={<TopNavigation />} />
-        <Route exact path={screenName.dashboard} element={<Dashboard />} />
-        <Route exact path={screenName.detailsPage} element={<DetailsPage />} />
+        <Route path={screenName.dashboard} element={<Dashboard />} />
+        <Route path={screenName.detailsPage} element={<DetailsPage />} />
       </Routes>
     </BrowserRouter>
   );

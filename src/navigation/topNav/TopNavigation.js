@@ -10,7 +10,7 @@ function TopNavigation() {
       <Navbar />
       <Routes>
         <Route exact path={screenName.dashboard} element={<Dashboard />} />
-        <Route exact path={screenName.detailsPage} element={<DetailsPage />} />
+        <Route path={screenName.detailsPage} element={<DetailsPage />} />
       </Routes>
     </>
   );
