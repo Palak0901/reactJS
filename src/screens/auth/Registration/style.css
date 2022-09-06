@@ -3,12 +3,6 @@ body {
   background: -webkit-linear-gradient(to left, #792e80, #dc9ce2);
   background: linear-gradient(to left, #792e80, #dc9ce2);
 }
-.form {
-  background-color: white;
-  border-radius: 5px;
-  margin: 20px auto;
-  padding: 20px;
-}
 .form-body {
   text-align: left;
   padding: 20px 10px;
@@ -43,7 +37,7 @@ body {
   font-size: large;
   color: rgb(172, 220, 220);
 }
-table {
+/* table {
   display: flex;
   border-collapse: collapse;
   border: 1px solid black;
@@ -56,4 +50,4 @@ th {
 td {
   flex: 1;
   padding: 3px;
-}
+} */
