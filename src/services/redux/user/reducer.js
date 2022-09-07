@@ -8,12 +8,6 @@ const initialState = {
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case types.registerDetail:
-      return {
-        ...state,
-        isLogin: true,
-        loginData: action.payload,
-      };
     case types.loginDetail:
       return {
         ...state,
