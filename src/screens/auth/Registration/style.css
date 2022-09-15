@@ -1,8 +1,8 @@
-body {
+/* body {
   background: #bdc3c7;
-  background: -webkit-linear-gradient(to left, #792e80, #dc9ce2);
-  background: linear-gradient(to left, #792e80, #dc9ce2);
-}
+  background: -webkit-linear-gradient(to left, #080309, #a9a2aa);
+  background: linear-gradient(to left, #080309, #a9a2aa);
+} */
 .form-body {
   text-align: left;
   padding: 20px 10px;
