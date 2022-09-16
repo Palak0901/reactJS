@@ -3,12 +3,8 @@
   background: -webkit-linear-gradient(to left, #080309, #a9a2aa);
   background: linear-gradient(to left, #080309, #a9a2aa);
 } */
-.form-body {
-  text-align: left;
-  padding: 20px 10px;
-}
-.form-body > * {
-  padding: 5px;
+* {
+  box-sizing: border-box;
 }
 .form__label {
   width: 30%;
@@ -37,17 +33,17 @@
   font-size: large;
   color: rgb(172, 220, 220);
 }
-/* table {
+.sideImage {
+  width: 100%;
+  height: 100%;
+}
+.rowRegister {
   display: flex;
-  border-collapse: collapse;
-  border: 1px solid black;
-}
-th {
-  flex: 0.2;
-  text-align: right;
-  padding: 3px;
-}
-td {
   flex: 1;
-  padding: 3px;
-} */
+}
+.col-1 {
+  flex: 1;
+  background-color: white;
+}
+@media screen and (max-width: 767px) {
+}

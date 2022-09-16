@@ -28,3 +28,25 @@
 .error_label {
   text-align: center;
 }
+.sideImage {
+  width: 100%;
+  height: 100%;
+}
+.rowRegister {
+  flex: 1;
+  display: flex;
+}
+.col-1 {
+  flex: 1;
+  background-image: url("../../../assets/image/flowBackground.jpeg");
+  background-repeat: "no-repeat";
+}
+@media screen and (max-width: 767px) {
+  .rowRegister {
+    flex-direction: column;
+  }
+  .sideImage {
+    height: 0%;
+    width: 0%;
+  }
+}
