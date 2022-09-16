@@ -16,5 +16,8 @@ export default {
   wallet: require("./image/wallet.png"),
   login: require("./image/login.jpg"),
   menu: require("./image/menu.png"),
+  backgroundImage: require("./image/backgroundImage.png"),
+  background: require("./image/background.jpeg"),
+  flowBackground: require("./image/flowBackground.jpeg"),
   svgIcon: svgIcon,
 };
