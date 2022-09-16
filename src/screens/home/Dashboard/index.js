@@ -175,7 +175,7 @@ const Dashboard = (props) => {
           toggleClose={() => setIsOpen((prevState) => !prevState)}
         />
       </Utils.components.divComponent>
-      <Utils.components.divComponent
+      {/* <Utils.components.divComponent
         style={{
           display: "flex",
           alignItems: "center",
@@ -224,7 +224,7 @@ const Dashboard = (props) => {
             <KeyboardArrowDownIcon />
           </IconButton>
         </Utils.components.divComponent>
-      </Utils.components.divComponent>
+      </Utils.components.divComponent> */}
       <Utils.components.divComponent className="row">
         {dashboardData.map((item, index) => {
           return (
@@ -282,14 +282,9 @@ const Dashboard = (props) => {
                   Monthly Recap Report
                 </Utils.components.labelComponent>
               </Utils.components.divComponent>
-              <Utils.components.divComponent>
-                <Utils.components.labelComponent>
-                  Show
-                </Utils.components.labelComponent>
-              </Utils.components.divComponent>
             </Utils.components.divComponent>
             <Divider />
-            <Utils.components.divComponent>
+            <Utils.components.divComponent className="text-card-header">
               <Utils.components.labelComponent className="text-center">
                 Sales: 1 Jan, 2014 - 30 Jul, 2014
               </Utils.components.labelComponent>
