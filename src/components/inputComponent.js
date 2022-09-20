@@ -24,20 +24,22 @@ const InputComponent = (props: propType) => {
           type={props?.type}
           placeholder={props?.placeholder}
         />
-        {props?.hideImage &&
-          (props?.show ? (
-            <img
-              onClick={props.onClick}
-              style={{ width: 20, marginLeft: 15 }}
-              src={Utils.allImage.hideImage}
-            />
-          ) : (
-            <img
-              onClick={props.onClickView}
-              style={{ width: 20, marginLeft: 15 }}
-              src={Utils.allImage.viewImage}
-            />
-          ))}
+        <div style={{ display: "flex", justifyContent: "center", flex: 1 }}>
+          {props?.hideImage &&
+            (props?.show ? (
+              <img
+                onClick={props.onClick}
+                style={{ width: 20 }}
+                src={Utils.allImage.hideImage}
+              />
+            ) : (
+              <img
+                onClick={props.onClickView}
+                style={{ width: 20 }}
+                src={Utils.allImage.viewImage}
+              />
+            ))}
+        </div>
       </Utils.components.divComponent>
     </Utils.components.divComponent>
   );
@@ -56,7 +58,7 @@ const styles = {
     marginTop: 10,
     backgroundColor: "white",
     borderRadius: 5,
-    width: "73%",
+    width: "70%",
   },
   inputContainer: {
     height: 30,

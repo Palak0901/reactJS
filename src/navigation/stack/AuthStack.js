@@ -28,6 +28,14 @@ const AuthStack = () => {
           path={Utils.screenName.detailsPage}
           element={<Utils.navigationImport.detailsScreen />}
         />
+        <Route
+          path={Utils.screenName.clothingDashboard}
+          element={<Utils.navigationImport.clothingDashboard />}
+        />
+        <Route
+          path={Utils.screenName.productDetails}
+          element={<Utils.navigationImport.productDetails />}
+        />
       </Routes>
     </BrowserRouter>
   );

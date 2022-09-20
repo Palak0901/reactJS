@@ -44,7 +44,7 @@ const LoginForm = () => {
       userLogin?.loginData[0]?.password === password
     ) {
       dispatch(Utils.services.loginDetail(userLogin?.loginData));
-      navigate(Utils.screenName.topNav);
+      navigate(Utils.screenName.clothingDashboard);
     } else {
       alert("User not Registered");
     }
@@ -84,18 +84,19 @@ const LoginForm = () => {
           >
             <Utils.components.labelComponent
               style={{
-                fontSize: 40,
+                fontSize: 35,
                 fontWeight: "bold",
                 color: "ButtonHighlight",
+                textAlign: "center",
               }}
             >
-              Welcome To Login Page
+              Welcome to Login Page
             </Utils.components.labelComponent>
           </Utils.components.divComponent>
           <Utils.components.inputComponent
             style={{
               height: 40,
-              width: "70%",
+              width: "80%",
               borderRadius: 5,
               paddingLeft: 10,
               paddingRight: 10,
@@ -120,7 +121,7 @@ const LoginForm = () => {
           <Utils.components.inputComponent
             style={{
               height: 40,
-              width: "70%",
+              width: "80%",
               borderRadius: 5,
               paddingLeft: 10,
               paddingRight: 10,
@@ -132,72 +133,87 @@ const LoginForm = () => {
             type={"password"}
             onChange={(res) => setPassword(res.target.value)}
             placeholder="Password"
+            hideImage
+            show={showPassword}
+            onClick={() => setShowPassword(!showPassword)}
+            onClickView={() => setShowPassword(!showPassword)}
           />
+          <Utils.components.labelComponent
+            style={{
+              color: "#f00",
+              fontSize: 13,
+              marginLeft: 55,
+            }}
+          >
+            {errorMessage.passwordError}
+          </Utils.components.labelComponent>
           <Utils.components.divComponent>
-            <Utils.components.labelComponent
-              style={{
-                color: "#f00",
-                fontSize: 13,
-                marginLeft: 55,
-              }}
-            >
-              {errorMessage.passwordError}
-            </Utils.components.labelComponent>
-            <div
+            <Utils.components.divComponent
               style={{
                 display: "flex",
                 alignItems: "center",
                 marginTop: 10,
+                marginLeft: 40,
+                marginRight: 40,
               }}
             >
-              <div onClick={() => setCheckBox(!checkBox)}>
-                {checkBox ? (
-                  <img
-                    src={Utils.allImage.checkImage}
-                    style={{
-                      height: 15,
-                      width: 15,
-                      marginLeft: 40,
-                      marginTop: 5,
-                    }}
-                  />
-                ) : (
-                  <img
-                    src={Utils.allImage.emptyImage}
-                    style={{
-                      height: 15,
-                      width: 15,
-                      marginLeft: 40,
-                      marginTop: 5,
-                    }}
-                  />
-                )}
-              </div>
-              <label
+              <Utils.components.divComponent
                 style={{
-                  fontSize: 12,
-                  fontWeight: "bold",
-                  color: "#00000080",
+                  display: "flex",
+                  alignItems: "center",
+                  // backgroundColor: "#605040",
                   flex: 1,
-                  marginLeft: 5,
                 }}
-                onClick={() => setCheckBox(!checkBox)}
               >
-                Remember Me?
-              </label>
-              <label
+                <Utils.components.divComponent
+                  onClick={() => setCheckBox(!checkBox)}
+                  style={{}}
+                >
+                  {checkBox ? (
+                    <Utils.components.imageComponent
+                      src={Utils.allImage.checkImage}
+                      style={{
+                        height: 15,
+                        width: 15,
+                        marginTop: 5,
+                      }}
+                    />
+                  ) : (
+                    <Utils.components.imageComponent
+                      src={Utils.allImage.emptyImage}
+                      style={{
+                        height: 15,
+                        width: 15,
+                        marginTop: 5,
+                      }}
+                    />
+                  )}
+                </Utils.components.divComponent>
+                <Utils.components.labelComponent
+                  style={{
+                    fontSize: 12,
+                    fontWeight: "bold",
+                    color: "#00000080",
+                    flex: 1,
+                    marginLeft: 5,
+                  }}
+                  onClick={() => setCheckBox(!checkBox)}
+                >
+                  Remember Me?
+                </Utils.components.labelComponent>
+              </Utils.components.divComponent>
+              <Utils.components.labelComponent
                 style={{
                   fontSize: 12,
                   fontWeight: "bold",
                   color: "#00000080",
-                  marginRight: 40,
                 }}
                 onClick={() => {}}
               >
                 Forgot Password?
-              </label>
-            </div>
-            <div className="footer">
+              </Utils.components.labelComponent>
+            </Utils.components.divComponent>
+            <Utils.components.divComponent className="footer">
               <button
                 type="submit"
                 style={{
@@ -209,7 +225,7 @@ const LoginForm = () => {
                   color: "black",
                   borderWidth: 0,
                   borderRadius: 12,
-                  marginTop: 30,
+                  marginTop: 10,
                   alignSelf: "center",
                 }}
                 onClick={() => handleSubmit()}
@@ -217,16 +233,38 @@ const LoginForm = () => {
               >
                 Login
               </button>
-            </div>
-            <div className="footer">
+            </Utils.components.divComponent>
+            <Utils.components.divComponent className="footer">
               <nav>
                 <Link to={Utils.screenName.registration} onClick={handleLogin}>
-                  <label>Don't have an account! Register</label>
+                  <Utils.components.labelComponent
+                    style={{
+                      fontSize: 20,
+                      color: "purple",
+                    }}
+                  >
+                    Don't have an account! Register
+                  </Utils.components.labelComponent>
                 </Link>
               </nav>
-            </div>
+            </Utils.components.divComponent>
           </Utils.components.divComponent>
-          {/* <div className="rowRegister">
+        </Utils.components.divComponent>
+        <Utils.components.imageComponent
+          style={{
+            height: 600,
+            width: "60%",
+          }}
+          src={Utils.allImage.welcome}
+        />
+      </Utils.components.divComponent>
+    </Utils.components.divComponent>
+  );
+};
+export default LoginForm;
+
+{
+  /* <div className="rowRegister">
             <div
               className="col-1"
               style={{
@@ -244,9 +282,9 @@ const LoginForm = () => {
                       justifyContent: "center",
                     }}
                   >
-                    <label style={{ fontSize: 30, color: "black" }}>
+                    <Utils.components.labelComponent style={{ fontSize: 30, color: "black" }}>
                       Login
-                    </label>
+                    </Utils.components.labelComponent>
                   </div>
                   <div
                     style={{
@@ -278,9 +316,9 @@ const LoginForm = () => {
                     />
                   </div>
                   <div>
-                    <label className="error_label error_name">
+                    <Utils.components.labelComponent className="error_label error_name">
                       {errorMessage.emailError}
-                    </label>
+                    </Utils.components.labelComponent>
                   </div>
                   <Utils.components.inputComponent
                     style={{
@@ -305,9 +343,9 @@ const LoginForm = () => {
                     onClickView={() => setShowPassword(!showPassword)}
                   />
                   <div>
-                    <label className="error_label error_name">
+                    <Utils.components.labelComponent className="error_label error_name">
                       {errorMessage.passwordError}
-                    </label>
+                    </Utils.components.labelComponent>
                   </div>
                 </div>{" "}
                 <div
@@ -319,7 +357,7 @@ const LoginForm = () => {
                 >
                   <div onClick={() => setCheckBox(!checkBox)}>
                     {checkBox ? (
-                      <img
+                      <Utils.components.imageComponent
                         src={Utils.allImage.checkImage}
                         style={{
                           height: 15,
@@ -329,7 +367,7 @@ const LoginForm = () => {
                         }}
                       />
                     ) : (
-                      <img
+                      <Utils.components.imageComponent
                         src={Utils.allImage.emptyImage}
                         style={{
                           height: 15,
@@ -340,7 +378,7 @@ const LoginForm = () => {
                       />
                     )}
                   </div>
-                  <label
+                  <Utils.components.labelComponent
                     style={{
                       fontSize: 12,
                       fontWeight: "bold",
@@ -351,8 +389,8 @@ const LoginForm = () => {
                     onClick={() => setCheckBox(!checkBox)}
                   >
                     Remember Me?
-                  </label>
-                  <label
+                  </Utils.components.labelComponent>
+                  <Utils.components.labelComponent
                     style={{
                       fontSize: 12,
                       fontWeight: "bold",
@@ -362,7 +400,7 @@ const LoginForm = () => {
                     onClick={() => {}}
                   >
                     Forgot Password?
-                  </label>
+                  </Utils.components.labelComponent>
                 </div>
                 <div className="footer">
                   <button
@@ -391,26 +429,11 @@ const LoginForm = () => {
                       to={Utils.screenName.registration}
                       onClick={handleLogin}
                     >
-                      <label>Don't have an account! Register</label>
+                      <Utils.components.labelComponent>Don't have an account! Register</Utils.components.labelComponent>
                     </Link>
                   </nav>
                 </div>
               </div>
             </div>
-          </div> */}
-        </Utils.components.divComponent>
-        {/* <div className="col-1"> */}
-        <img
-          // className="sideImage"
-          style={{
-            height: 590,
-            width: "60%",
-          }}
-          src={Utils.allImage.welcome}
-        />
-        {/* </div> */}
-      </Utils.components.divComponent>
-    </Utils.components.divComponent>
-  );
-};
-export default LoginForm;
+          </div> */
+}

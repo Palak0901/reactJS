@@ -99,7 +99,7 @@ const RegistrationForm = () => {
     //       <Utils.components.inputComponent
     //         style={{
     //           height: 40,
-    //           width: "70%",
+    //           width: "80%",
     //           borderRadius: 5,
     //           paddingLeft: 10,
     //           paddingRight: 10,
@@ -124,7 +124,7 @@ const RegistrationForm = () => {
     //               }}
     //               style={{
     //                 height: 40,
-    //                 width: "70%",
+    //                 width: "80%",
     //                 borderRadius: 5,
     //                 paddingLeft: 10,
     //                 paddingRight: 10,
@@ -149,7 +149,7 @@ const RegistrationForm = () => {
     //       <Utils.components.inputComponent
     //         style={{
     //           height: 40,
-    //           width: "70%",
+    //           width: "80%",
     //           borderRadius: 5,
     //           paddingLeft: 10,
     //           paddingRight: 10,
@@ -175,7 +175,7 @@ const RegistrationForm = () => {
     //       <Utils.components.inputComponent
     //         style={{
     //           height: 40,
-    //           width: "70%",
+    //           width: "80%",
     //           borderRadius: 5,
     //           paddingLeft: 10,
     //           paddingRight: 10,
@@ -203,7 +203,7 @@ const RegistrationForm = () => {
     //       <Utils.components.inputComponent
     //         style={{
     //           height: 40,
-    //           width: "70%",
+    //           width: "80%",
     //           borderRadius: 5,
     //           paddingLeft: 10,
     //           paddingRight: 10,
@@ -228,7 +228,7 @@ const RegistrationForm = () => {
     //       <Utils.components.inputComponent
     //         style={{
     //           height: 40,
-    //           width: "70%",
+    //           width: "80%",
     //           borderRadius: 5,
     //           paddingLeft: 10,
     //           paddingRight: 10,
@@ -255,7 +255,7 @@ const RegistrationForm = () => {
     //       <Utils.components.inputComponent
     //         style={{
     //           height: 40,
-    //           width: "70%",
+    //           width: "80%",
     //           borderRadius: 5,
     //           paddingLeft: 10,
     //           paddingRight: 10,
@@ -330,7 +330,7 @@ const RegistrationForm = () => {
         <img
           // className="sideImage"
           style={{
-            height: 590,
+            height: 600,
             width: "60%",
           }}
           src={Utils.allImage.welcome}
@@ -342,8 +342,9 @@ const RegistrationForm = () => {
             backgroundColor: "lightblue",
             borderRadius: 20,
             padding: 10,
-            paddingTop: 30,
-            paddingBottom: 30,
+            paddingTop: 10,
+            paddingBottom: 10,
+            marginRight: 50,
           }}
         >
           <div>
@@ -355,7 +356,11 @@ const RegistrationForm = () => {
               }}
             >
               <Utils.components.labelComponent
-                style={{ fontSize: 30, color: "black" }}
+                style={{
+                  fontSize: 35,
+                  fontWeight: "bold",
+                  color: "ButtonHighlight",
+                }}
               >
                 Registration
               </Utils.components.labelComponent>
@@ -363,7 +368,7 @@ const RegistrationForm = () => {
             <Utils.components.inputComponent
               style={{
                 height: 40,
-                width: "70%",
+                width: "80%",
                 borderRadius: 5,
                 paddingLeft: 10,
                 paddingRight: 10,
@@ -388,7 +393,7 @@ const RegistrationForm = () => {
                    }}
                    style={{
                      height: 40,
-                     width: "70%",
+                     width: "80%",
                      borderRadius: 5,
                      paddingLeft: 10,
                      paddingRight: 10,
@@ -413,7 +418,7 @@ const RegistrationForm = () => {
             <Utils.components.inputComponent
               style={{
                 height: 40,
-                width: "70%",
+                width: "80%",
                 borderRadius: 5,
                 paddingLeft: 10,
                 paddingRight: 10,
@@ -439,7 +444,7 @@ const RegistrationForm = () => {
             <Utils.components.inputComponent
               style={{
                 height: 40,
-                width: "70%",
+                width: "80%",
                 borderRadius: 5,
                 paddingLeft: 10,
                 paddingRight: 10,
@@ -467,7 +472,7 @@ const RegistrationForm = () => {
             <Utils.components.inputComponent
               style={{
                 height: 40,
-                width: "70%",
+                width: "80%",
                 borderRadius: 5,
                 paddingLeft: 10,
                 paddingRight: 10,
@@ -492,7 +497,7 @@ const RegistrationForm = () => {
             <Utils.components.inputComponent
               style={{
                 height: 40,
-                width: "70%",
+                width: "80%",
                 borderRadius: 5,
                 paddingLeft: 10,
                 paddingRight: 10,
@@ -519,7 +524,7 @@ const RegistrationForm = () => {
             <Utils.components.inputComponent
               style={{
                 height: 40,
-                width: "70%",
+                width: "80%",
                 borderRadius: 5,
                 paddingLeft: 10,
                 paddingRight: 10,
@@ -565,7 +570,7 @@ const RegistrationForm = () => {
               Register
             </button>
           </div>
-          <div className="footer" style={{ marginTop: 10, marginBottom: 20 }}>
+          <div className="footer" style={{ marginTop: 10 }}>
             <nav>
               <Link to={Utils.screenName.login} onClick={() => handleLogin()}>
                 <Utils.components.labelComponent
